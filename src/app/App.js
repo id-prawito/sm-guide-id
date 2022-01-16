@@ -10,7 +10,7 @@ import "./app.scss";
 function App() {
     const { theme } = useContext(ThemeContext);
     return (
-        <BrowserRouter>
+        <BrowserRouter basename="sm-guide-id">
             <ThemeProvider theme={{ theme }}>
                 <GlobalStyles />
                 <RouteSite />
