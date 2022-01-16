@@ -1,0 +1,54 @@
+/* Smartphones (portrait and landscape) ----------- min-width: 320px & max-width: 480px*/
+@mixin smartphones {
+  @media only screen and (min-device-width: $smartphones-min-width) and (max-device-width : $smartphones-max-width) {
+    @content;
+  }
+}
+
+/* iPads (portrait and landscape) ----------- min-width: 481px & max-width: 768px*/
+@mixin ipads {
+  @media only screen and (min-device-width : $mobile-width) and (max-device-width : $tablet-width) {
+    @content;
+  }
+}
+
+/* Laptop (portrait and landscape) ----------- min-width: 769px & max-width: 1024px*/
+@mixin laptop {
+  @media only screen and (min-device-width : $laptop-width) and (max-device-width : $desktop-width) {
+    @content;
+  }
+}
+
+@mixin laptop_large {
+  @media only screen and (min-device-width : $desktop-width) and (max-device-width : $desktop-large-width) {
+    @content;
+  }
+}
+
+/* Desktops and laptops ----------- */
+@mixin desktops {
+  @media only screen and (max-width: $desktop-large-width) {
+    @content;
+  }
+}
+
+/* Large screens ----------- */
+@mixin screen {
+  @media only screen and (min-width : $screen-large-width) {
+    @content;
+  }
+}
+
+/* Mobile screens ----------- */
+@mixin mobile {
+  @media only screen and (max-width: $mobile-width) {
+    @content;
+  }
+}
+
+/* Tablet screens ----------- */
+@mixin tablet {
+  @media only screen and (max-width: $tablet-width) {
+    @content;
+  }
+}

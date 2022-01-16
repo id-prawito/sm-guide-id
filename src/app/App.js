@@ -1,13 +1,21 @@
-import "./app.css";
+import { BrowserRouter } from "react-router-dom";
+import { ThemeProvider } from "styled-components";
+import { useContext } from "react";
+import GlobalStyles from "../config/GlobalStyles";
+import ThemeContext from "../config/ThemeContext";
+import RouteSite from "../config/RouteSite";
+
+import "./app.scss";
 
 function App() {
+    const { theme } = useContext(ThemeContext);
     return (
-        <div className="App">
-            <h1>
-                Hello World chart-js react-router-dom react-circular-progressbar
-                react-router-dom react-chartjs-2 sass styled-components
-            </h1>
-        </div>
+        <BrowserRouter>
+            <ThemeProvider theme={{ theme }}>
+                <GlobalStyles />
+                <RouteSite />
+            </ThemeProvider>
+        </BrowserRouter>
     );
 }
 
