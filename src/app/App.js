@@ -3,9 +3,8 @@ import { ThemeProvider } from "styled-components";
 import { useContext } from "react";
 import GlobalStyles from "../config/GlobalStyles";
 import ThemeContext from "../config/ThemeContext";
-import RouteSite from "../config/RouteSite";
-
 import "./app.scss";
+import RouteSite from "../config/RouteSite";
 
 function App() {
     const { theme } = useContext(ThemeContext);
