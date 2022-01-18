@@ -1,5 +1,6 @@
 import React, { useState } from "react";
-import { AcordionContent } from "./AcordionElements";
+import { AcordionContent, AcordionContentTools } from "./AcordionElements";
+import { toolsData } from "../../config/Data";
 
 const Acordion = ({ items, color }) => {
     const [active, setActive] = useState();
@@ -21,6 +22,36 @@ const Acordion = ({ items, color }) => {
                         itemCaption={item.caption}
                         itemName={item.name}
                         itemContent={item.content}
+                        isActive={isActive}
+                    />
+                );
+            })}
+        </div>
+    );
+};
+
+const AcordionTools = ({ items, color }) => {
+    const [active, setActive] = useState();
+
+    const handleClick = (name) => {
+        setActive(name === active ? null : name);
+    };
+
+    return (
+        <div className="container_item">
+            {items.map((item, i) => {
+                let isActive = active === item.name;
+
+                return (
+                    <AcordionContentTools
+                        color={color}
+                        key={i}
+                        onClick={() => handleClick(item.name)}
+                        itemCaption={item.caption}
+                        itemName={item.name}
+                        itemContent={item.content}
+                        ItemLogo={item.icon}
+                        itemIconLogo={item.icon_logo}
                         isActive={isActive}
                     />
                 );
@@ -51,6 +82,16 @@ const Render = ({ color }) => {
     return (
         <div className="container">
             <Acordion items={items} color={color} />
+        </div>
+    );
+};
+
+export const RenderTools = ({ color }) => {
+    console.log(toolsData.instagram);
+
+    return (
+        <div className="container">
+            <AcordionTools items={toolsData.instagram} color={color} />
         </div>
     );
 };

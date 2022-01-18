@@ -8,6 +8,7 @@ export const MainElements = styled.div`
         &__content {
             min-height: 130vh;
             padding: 48px;
+            margin-right: 40px;
             transition: all 0.5s ease-in-out;
         }
     }

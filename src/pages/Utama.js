@@ -4,6 +4,8 @@ import { FiMessageSquare, FiMoreHorizontal } from "react-icons/fi";
 import { FaAngleDown } from "react-icons/fa";
 import Switch from "../components/switch";
 import Render from "../components/acordion";
+import Card from "../components/card";
+import Tools from "../components/card/tools";
 
 const Utama = ({
     gambar,
@@ -20,10 +22,14 @@ const Utama = ({
     angka_key,
     angka_text_key,
     add_text,
+    id,
 }) => {
     return (
         <SocialMain>
-            <div className="social_content">
+            <div
+                style={{ borderRight: `1px solid ${color}` }}
+                className="social_content"
+            >
                 <div className="content_date">
                     <div className="card_images">
                         <div
@@ -165,6 +171,29 @@ const Utama = ({
                             </div>
                         </div>
                     </div>
+                </div>
+            </div>
+            <div className="advice_content">
+                <div className="advice">
+                    <div className="advice_heading">
+                        <div className="text">Advice</div>
+                        <FiMoreHorizontal className="icon" />
+                    </div>
+                    <div className="card_advice">
+                        <Card color={color} id={id} />
+                    </div>
+                </div>
+                <div className="advice">
+                    <div className="advice_heading">
+                        <div
+                            style={{ textTransform: "capitalize" }}
+                            className="text"
+                        >
+                            {id} Tools
+                        </div>
+                        <FiMoreHorizontal className="icon" />
+                    </div>
+                    <Tools color={color} />
                 </div>
             </div>
         </SocialMain>

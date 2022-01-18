@@ -23,17 +23,14 @@ import { useLocation } from "react-router-dom";
 const Social = () => {
     const location = useLocation();
 
-    const curPath = window.location.pathname.split("/sm-guide-id/")[1];
-
-    console.log(curPath, location.pathname);
     return (
         <>
             {location.pathname === "/instagram" ? (
                 <Utama
                     gambar={instagram_logo}
                     gambar_2={instagram_text}
-                    text_1="THE MOST POPULAR"
-                    text_2="INSTAGRAM SOCIAL NETWORK"
+                    text_1="M-Commerce"
+                    text_2="INSTAGRAM is SOCIAL MEDIA"
                     color="#b42694"
                     angka_user="2.1 bilion"
                     angka_text_user="deskripsi"
@@ -44,13 +41,14 @@ const Social = () => {
                     angka_key="2.1 bilion"
                     angka_text_key="people use Messanger"
                     add_text=""
+                    id="instagram"
                 />
             ) : location.pathname === "/facebook" ? (
                 <Utama
                     gambar={gambar}
                     gambar_2={gambar_2}
                     text_1="THE MOST POPULAR"
-                    text_2="FACEBOOK SOCIAL NETWORK"
+                    text_2="FACEBOOK is SOCIAL NETWORK"
                     color="#4267B2"
                     angka_user="2.1 bilion"
                     angka_text_user="deskripsi"
@@ -61,13 +59,14 @@ const Social = () => {
                     angka_key="2.1 bilion"
                     angka_text_key="people use Messanger"
                     add_text=""
+                    id="facebook"
                 />
             ) : location.pathname === "/twitter" ? (
                 <Utama
                     gambar={twitter_logo}
                     gambar_2={twitter_text}
-                    text_1="THE MOST POPULAR"
-                    text_2="TWITTER SOCIAL NETWORK"
+                    text_1="THE MICRO"
+                    text_2="BLOGGING PLATFORM"
                     color="#1DA1F2"
                     angka_user="2.1 bilion"
                     angka_text_user="deskripsi"
@@ -78,13 +77,14 @@ const Social = () => {
                     angka_key="2.1 bilion"
                     angka_text_key="people use Messanger"
                     add_text="Morning & End of the Day"
+                    id="twitter"
                 />
             ) : location.pathname === "/linkedin" ? (
                 <Utama
                     gambar={linkedin_logo}
                     gambar_2={linkedin_text}
-                    text_1="THE MOST POPULAR"
-                    text_2="LINKEDIN SOCIAL NETWORK"
+                    text_1="PROFESSIONAL"
+                    text_2="LINKEDIN is SOCIAL MEDIA"
                     color="#0e76a8"
                     angka_user="2.1 bilion"
                     angka_text_user="deskripsi"
@@ -95,13 +95,14 @@ const Social = () => {
                     angka_key="2.1 bilion"
                     angka_text_key="people use Messanger"
                     add_text="Office Hourse"
+                    id="linkedin"
                 />
             ) : location.pathname === "/pinterest" ? (
                 <Utama
                     gambar={pinterest_logo}
                     gambar_2={pinterest_text}
-                    text_1="THE MOST POPULAR"
-                    text_2="PINTEREST SOCIAL NETWORK"
+                    text_1="PINS"
+                    text_2="FOR YOURS SOCIAL MEDIA"
                     color="#F0002A"
                     angka_user="2.1 bilion"
                     angka_text_user="deskripsi"
@@ -112,14 +113,15 @@ const Social = () => {
                     angka_key="2.1 bilion"
                     angka_text_key="people use Messanger"
                     add_text="End of the Day"
+                    id="pinterest"
                 />
             ) : location.pathname === "/snapchat" ? (
                 <Utama
                     gambar={snapchat_logo}
                     gambar_2={snapchat_text}
-                    text_1="THE MOST POPULAR"
-                    text_2="SNAPCHAT SOCIAL NETWORK"
-                    color="#fffc00"
+                    text_1="FILTER USE"
+                    text_2="ON SOCIAL MEDIA"
+                    color="#dfdd00"
                     angka_user="2.1 bilion"
                     angka_text_user="deskripsi"
                     angka_age="2.1"
@@ -129,13 +131,14 @@ const Social = () => {
                     angka_key="2.1 bilion"
                     angka_text_key="people use Messanger"
                     add_text="10PM to 1AM"
+                    id="snapchat"
                 />
             ) : location.pathname === "/tiktok" ? (
                 <Utama
                     gambar={tiktok_logo}
                     gambar_2={tiktok_text}
-                    text_1="THE MOST POPULAR"
-                    text_2="TIKTOK MOST SOCIAL NETWORK"
+                    text_1="THE NEWCOMER"
+                    text_2="of SOCIAL PLATFORM"
                     color="#69C9D0"
                     angka_user="2.1 bilion"
                     angka_text_user="deskripsi"
@@ -146,13 +149,14 @@ const Social = () => {
                     angka_key="2.1 bilion"
                     angka_text_key="people use Messanger"
                     add_text="After School Hourse"
+                    id="tiktok"
                 />
             ) : location.pathname === "/twitch" ? (
                 <Utama
                     gambar={twitch_logo}
                     gambar_2={twitch_text}
-                    text_1="THE MOST POPULAR"
-                    text_2="TWITCH MOST SOCIAL NETWORK"
+                    text_1="THE NUMBER #1"
+                    text_2="STREAMING PLATFORM"
                     color="#9147fe"
                     angka_user="2.1 bilion"
                     angka_text_user="deskripsi"
@@ -163,13 +167,14 @@ const Social = () => {
                     angka_key="2.1 bilion"
                     angka_text_key="people use Messanger"
                     add_text="End of the Day"
+                    id="twitch"
                 />
             ) : location.pathname === "/youtube" ? (
                 <Utama
                     gambar={youtube_logo}
                     gambar_2={youtube_text}
-                    text_1="THE MOST POPULAR"
-                    text_2="YOUTUBE MOST SOCIAL NETWORK"
+                    text_1="THE MOST VIDEO"
+                    text_2="of SOCIAL MEDIA"
                     color="#ff0000"
                     angka_user="2.1 bilion"
                     angka_text_user="deskripsi"
@@ -180,6 +185,7 @@ const Social = () => {
                     angka_key="2.1 bilion"
                     angka_text_key="people use Messanger"
                     add_text="End of the Day"
+                    id="youtube"
                 />
             ) : null}
         </>

@@ -2,9 +2,13 @@ import styled from "styled-components";
 import themeList from "../config/themeList";
 
 export const SocialMain = styled.div`
-    width: 620px;
-    height: 80vh;
+    width: 100%;
+    height: 100%;
     padding-top: 20px;
+    display: grid;
+    justify-content: space-between;
+    grid-template-columns: 60% 40%;
+    /* gap: 40px; */
 
     .text {
         font-size: 18px;
@@ -29,16 +33,23 @@ export const SocialMain = styled.div`
         flex-direction: column;
         gap: 40px;
         width: 100%;
+        padding-right: 50px;
 
         .content_date {
-            display: flex;
-            justify-content: space-between;
+            display: grid;
+            grid-template-columns: 32% 62%;
+            align-items: center;
+            gap: 40px;
+
+            .card_images {
+                width: 100%;
+            }
 
             .card_publish {
                 display: flex;
                 flex-direction: column;
                 gap: 10px;
-                width: 340px;
+                width: 100%;
 
                 .publish_heading {
                     display: flex;
@@ -311,6 +322,71 @@ export const SocialMain = styled.div`
     }
     .card-box p {
         color: #808080;
+    }
+
+    .advice_content {
+        display: grid;
+        grid-template-rows: 55% 40.8%;
+        height: 100%;
+        padding-left: 50px;
+        width: 100%;
+        align-items: stretch;
+        gap: 40px;
+
+        .advice {
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+
+            .advice_heading {
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+            }
+        }
+
+        .card_advice {
+            display: flex;
+            flex-direction: column;
+            width: 100%;
+            height: 100%;
+            gap: 20px;
+
+            .card_nya {
+                display: grid;
+                grid-template-columns: 10% 88%;
+                justify-content: space-between;
+                width: 100%;
+                align-items: center;
+                padding: 10px;
+                gap: 10px;
+                border-radius: 8px;
+                background-color: #fff;
+                color: #000;
+                box-shadow: rgb(2 12 27 / 70%) 0px 10px 30px -24px;
+                height: 60px;
+
+                .icon_advice {
+                    font-size: 30px;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                }
+
+                .content_advice {
+                    font-size: 14px;
+                    width: 100%;
+                    -webkit-box-orient: vertical;
+                    -webkit-line-clamp: 2;
+                    display: -webkit-box;
+                    line-height: 20px;
+                    overflow: hidden;
+                    text-align: left;
+                    text-overflow: ellipsis;
+                    white-space: normal;
+                }
+            }
+        }
     }
 `;
 

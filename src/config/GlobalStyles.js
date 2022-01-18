@@ -58,10 +58,10 @@ const GlobalStyles = createGlobalStyle`
     border-radius: 10px;
   }
 
-  ::-webkit-scrollbar-track {
+  /* ::-webkit-scrollbar-track {
     background: ${({ theme: { theme } }) =>
         theme === themeList.light ? "#f0f8ff" : "#1a1d29"};
-  }
+  } */
 
   a {
     text-decoration: none;

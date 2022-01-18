@@ -1,4 +1,4 @@
-import { FaAngleDown, FaDelicious } from "react-icons/fa";
+import { FaAngleDown, FaDelicious, FaMinus, FaPlus } from "react-icons/fa";
 import styled from "styled-components";
 import "./app.css";
 
@@ -71,6 +71,47 @@ const Pembungkus = styled.div`
     }
 `;
 
+const PembungkusSatu = styled.div`
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+    width: 100%;
+    justify-content: flex-start;
+    background-color: #fff;
+    height: 100%;
+    border-radius: ${(props) => (props.isActive ? "8px 8px 0px 0px" : "8px")};
+    color: #000;
+    align-items: center;
+    padding: 1rem;
+    transition: all 0.2s;
+
+    .icon_nya_b {
+        /* background-color: aqua; */
+        border-radius: 10px;
+        padding: 13px;
+        color: #fff;
+        display: flex;
+        align-items: center;
+        font-size: 25px;
+    }
+
+    .heading_nya {
+        display: flex;
+        flex-direction: column;
+        gap: 4px;
+
+        .heading_name {
+            font-size: 14px;
+            font-weight: 600;
+        }
+
+        .heading_caption {
+            font-size: 12px;
+            font-weight: 400;
+        }
+    }
+`;
+
 const Content = styled.div`
     position: relative;
     overflow: hidden;
@@ -117,4 +158,41 @@ const AcordionContent = ({
     );
 };
 
-export { AcordionContent };
+const AcordionContentTools = ({
+    onClick,
+    itemName,
+    itemContent,
+    isActive,
+    itemCaption,
+    ItemLogo,
+    itemIconLogo,
+    color,
+}) => {
+    return (
+        <>
+            <Header isActive={isActive} onClick={onClick} color={color}>
+                <PembungkusSatu isActive={isActive}>
+                    <div className="icon_nya_b" style={{ background: color }}>
+                        <ItemLogo />
+                    </div>
+                    <div className="heading_nya">
+                        <div className="heading_name">{itemName}</div>
+                        <div className="heading_caption">{itemCaption}</div>
+                    </div>
+                </PembungkusSatu>
+                <HeaderIcon style={{ padding: "10px" }} isActive={isActive}>
+                    {isActive ? (
+                        <FaMinus fontSize={14} />
+                    ) : (
+                        <FaPlus fontSize={14} />
+                    )}
+                </HeaderIcon>
+            </Header>
+            <Content itemName={itemName} isActive={isActive}>
+                <Inner id={itemName}>{itemContent}</Inner>
+            </Content>
+        </>
+    );
+};
+
+export { AcordionContent, AcordionContentTools };
