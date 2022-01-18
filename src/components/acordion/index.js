@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import { AcordionContent, AcordionContentTools } from "./AcordionElements";
 import { toolsData } from "../../config/Data";
+import { useLocation } from "react-router-dom";
 
 const Acordion = ({ items, color }) => {
     const [active, setActive] = useState();
@@ -51,7 +52,6 @@ const AcordionTools = ({ items, color }) => {
                         itemName={item.name}
                         itemContent={item.content}
                         ItemLogo={item.icon}
-                        itemIconLogo={item.icon_logo}
                         isActive={isActive}
                     />
                 );
@@ -87,11 +87,35 @@ const Render = ({ color }) => {
 };
 
 export const RenderTools = ({ color }) => {
-    console.log(toolsData.instagram);
+    // console.log(toolsData.instagram);
+
+    const location = useLocation();
+
+    console.log(location.pathname);
 
     return (
         <div className="container">
-            <AcordionTools items={toolsData.instagram} color={color} />
+            {location.pathname === "/instagram" ? (
+                <AcordionTools items={toolsData.instagram} color={color} />
+            ) : location.pathname === "/facebook" ? (
+                <AcordionTools items={toolsData.facebook} color={color} />
+            ) : location.pathname === "/twitter" ? (
+                <AcordionTools items={toolsData.twitter} color={color} />
+            ) : location.pathname === "/linkedin" ? (
+                <AcordionTools items={toolsData.linkedin} color={color} />
+            ) : location.pathname === "/pinterest" ? (
+                <AcordionTools items={toolsData.pinterest} color={color} />
+            ) : location.pathname === "/snapchat" ? (
+                <AcordionTools items={toolsData.snapchat} color={color} />
+            ) : location.pathname === "/tiktok" ? (
+                <AcordionTools items={toolsData.tiktok} color={color} />
+            ) : location.pathname === "/twitch" ? (
+                <AcordionTools items={toolsData.twitch} color={color} />
+            ) : location.pathname === "/youtube" ? (
+                <AcordionTools items={toolsData.youtube} color={color} />
+            ) : null}
+
+            {/* <AcordionTools items={toolsData.instagram} color={color} /> */}
         </div>
     );
 };

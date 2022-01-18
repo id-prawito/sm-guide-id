@@ -1,29 +1,41 @@
 import styled from "styled-components";
 
+import themeList from "../../config/themeList";
+
 export const SidebarMain = styled.div`
     .sidebar {
         display: flex;
         align-items: stretch;
         justify-content: flex-start;
         flex-direction: column;
-        color: #4e4d4f;
-        width: 320px;
-        background-color: #fff;
+
+        color: ${({ theme: { theme } }) =>
+            theme === themeList.light ? "#4e4d4f" : "#fff"};
+        width: 300px;
+        padding: 35px;
+        background-color: ${({ theme: { theme } }) =>
+            theme === themeList.light ? "#fff" : "#1f2937"};
         height: 100vh;
         position: fixed;
+        gap: 20px;
         top: 0;
         z-index: 100;
         border-radius: 0px 10px 10px 0px;
-        box-shadow: rgb(2 12 27 / 70%) 0px 10px 30px -26px;
+
+        box-shadow: ${({ theme: { theme } }) =>
+            theme === themeList.light
+                ? "rgb(2 12 27 / 70%) 0px 10px 30px -26px"
+                : "rgb(0 0 0 / 70%) 0px 10px 30px -20px"};
 
         &__logo {
             display: flex;
             align-items: center;
-            justify-content: center;
-            height: 171px;
+            justify-content: flex-start;
+            padding-left: 15%;
+            height: 120px;
 
             img {
-                --size: 55px;
+                --size: 40px;
                 width: var(--size);
                 height: var(--size);
             }
@@ -44,7 +56,7 @@ export const SidebarMain = styled.div`
             justify-content: flex-start;
             flex-direction: column;
             flex-grow: 1;
-            gap: 35px;
+            gap: 30px;
             padding-bottom: 40px;
 
             .menu_item {
@@ -64,6 +76,32 @@ export const SidebarMain = styled.div`
                     font-weight: 700;
                     color: #8624db;
 
+                    &:nth-child(3n - 2) {
+                        &::before {
+                            content: "";
+                            position: absolute;
+                            height: 60%;
+                            width: 5px;
+                            left: 0;
+                            top: 0;
+                            background-color: #8624db;
+                            border-top-left-radius: 20px;
+                            border-bottom-left-radius: 20px;
+                        }
+
+                        &::after {
+                            content: "";
+                            position: absolute;
+                            height: 60%;
+                            width: 5px;
+                            right: 0;
+                            top: 0;
+                            background-color: #8624db;
+                            border-top-right-radius: 20px;
+                            border-bottom-right-radius: 20px;
+                        }
+                    }
+
                     &::before {
                         content: "";
                         position: absolute;
@@ -72,13 +110,25 @@ export const SidebarMain = styled.div`
                         left: 0;
                         top: 0;
                         background-color: #8624db;
+                        border-top-left-radius: 20px;
+                        border-bottom-left-radius: 20px;
+                    }
+
+                    &::after {
+                        content: "";
+                        position: absolute;
+                        height: 100%;
+                        width: 5px;
+                        right: 0;
+                        top: 0;
+                        background-color: #8624db;
                         border-top-right-radius: 20px;
                         border-bottom-right-radius: 20px;
                     }
                 }
 
                 .menu_icon {
-                    --size: 30px;
+                    --size: 22px;
                     width: var(--size);
                     height: var(--size);
 
@@ -88,8 +138,18 @@ export const SidebarMain = styled.div`
                     }
                 }
 
+                .menu_text {
+                    font-size: 14px;
+                    font-weight: 500;
+                }
+
                 &:last-child {
                     margin-top: auto;
+                }
+
+                &:nth-child(3n - 2) {
+                    border-bottom: 1.8px solid #c8c8c8;
+                    padding-bottom: 20px;
                 }
 
                 .pembungkus {
@@ -97,8 +157,6 @@ export const SidebarMain = styled.div`
                     justify-content: space-between;
                     align-items: center;
                     width: 100%;
-                    padding-right: 30px;
-
                     .bungkus {
                         display: inline-flex;
                         align-items: center;

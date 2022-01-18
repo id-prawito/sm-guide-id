@@ -21,11 +21,21 @@ const Sidebar = () => {
         setActiveIndex(curPath.length === 0 ? 0 : activeItem);
     }, [location]);
 
+    const warna = (
+        <>
+            {location.pathname === "/instagram"
+                ? "#b42694"
+                : location.pathname === "/facebook"
+                ? "#4267B2"
+                : null}
+        </>
+    );
     return (
-        <SidebarMain>
+        <SidebarMain color={warna}>
             <div className="sidebar">
                 <div className="sidebar__logo">
                     <img src={logo} alt="logo" />
+
                     <div className="sidebar-close">
                         <FiX />
                     </div>

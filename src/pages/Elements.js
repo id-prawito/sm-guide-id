@@ -115,8 +115,11 @@ export const SocialMain = styled.div`
                     justify-content: space-between;
                     align-items: flex-start;
                     background-color: #fff;
-                    /* padding: 10px; */
-                    box-shadow: rgb(2 12 27 / 70%) 0px 10px 30px -30px;
+
+                    box-shadow: ${({ theme: { theme } }) =>
+                        theme === themeList.light
+                            ? "rgb(2 12 27 / 70%) 0px 10px 30px -30px"
+                            : "rgb(0 0 0 / 70%) 0px 10px 30px -20px"};
                     color: #000;
                     flex-direction: column;
 
@@ -145,8 +148,12 @@ export const SocialMain = styled.div`
                         justify-content: space-between;
                         width: 100%;
                         height: 100%;
-                        /* background-color: #0f71c9; */
+
                         border-radius: 8px;
+                        box-shadow: ${({ theme: { theme } }) =>
+                            theme === themeList.light
+                                ? "rgb(2 12 27 / 70%) 0px 10px 30px -30px"
+                                : "rgb(0 0 0 / 70%) 0px 10px 30px -20px"};
 
                         .content_satu {
                             display: flex;
@@ -164,7 +171,10 @@ export const SocialMain = styled.div`
                         }
 
                         .content_dua {
-                            background-color: #fff;
+                            background-color: ${({ theme: { theme } }) =>
+                                theme === themeList.light ? "#fff" : "#1f2937"};
+                            color: ${({ theme: { theme } }) =>
+                                theme === themeList.light ? "#000" : "#fff"};
                             height: 100%;
                             width: 140px;
                             padding: 10px;
@@ -198,10 +208,17 @@ export const SocialMain = styled.div`
                     display: flex;
                     justify-content: space-between;
                     align-items: flex-start;
-                    background-color: #fff;
+                    background-color: ${({ theme: { theme } }) =>
+                        theme === themeList.light ? "#fff" : "#1f2937"};
                     padding: 10px;
-                    box-shadow: rgb(2 12 27 / 70%) 0px 10px 30px -30px;
-                    color: #000;
+
+                    box-shadow: ${({ theme: { theme } }) =>
+                        theme === themeList.light
+                            ? "rgb(2 12 27 / 70%) 0px 10px 30px -30px"
+                            : "rgb(0 0 0 / 70%) 0px 10px 30px -20px"};
+                    color: ${({ theme: { theme } }) =>
+                        theme === themeList.light ? "#000" : "#fff"};
+
                     flex-direction: column;
 
                     .judul {
@@ -361,9 +378,14 @@ export const SocialMain = styled.div`
                 padding: 10px;
                 gap: 10px;
                 border-radius: 8px;
-                background-color: #fff;
-                color: #000;
-                box-shadow: rgb(2 12 27 / 70%) 0px 10px 30px -24px;
+                background-color: ${({ theme: { theme } }) =>
+                    theme === themeList.light ? "#fff" : "#1f2937"};
+                color: ${({ theme: { theme } }) =>
+                    theme === themeList.light ? "#000" : "#fff"};
+                box-shadow: ${({ theme: { theme } }) =>
+                    theme === themeList.light
+                        ? "rgb(2 12 27 / 70%) 0px 10px 30px -24px"
+                        : "rgb(0 0 0 / 70%) 0px 10px 30px -20px"};
                 height: 60px;
 
                 .icon_advice {

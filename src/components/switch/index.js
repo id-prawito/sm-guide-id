@@ -14,8 +14,8 @@ const Switch = ({ id, color, value }) => {
                 <Card color={color}>
                     {checkValue ? (
                         <p
+                            className="warnanya"
                             style={{
-                                color: "#000",
                                 textTransform: "capitalize",
                                 fontSize: "13px",
                                 fontWeight: 500,
@@ -25,6 +25,7 @@ const Switch = ({ id, color, value }) => {
                         </p>
                     ) : (
                         <p
+                            className="bisa"
                             style={{
                                 color: "#bebebe",
                                 textTransform: "capitalize",

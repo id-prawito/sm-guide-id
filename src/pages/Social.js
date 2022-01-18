@@ -1,5 +1,5 @@
 import React from "react";
-import Utama from "./Utama";
+import Main from "./Main";
 import gambar from "../assets/img/facebook_logo.svg";
 import gambar_2 from "../assets/img/facebook_text.svg";
 import instagram_logo from "../assets/img/instagram_logo.svg";
@@ -26,7 +26,7 @@ const Social = () => {
     return (
         <>
             {location.pathname === "/instagram" ? (
-                <Utama
+                <Main
                     gambar={instagram_logo}
                     gambar_2={instagram_text}
                     text_1="M-Commerce"
@@ -44,7 +44,7 @@ const Social = () => {
                     id="instagram"
                 />
             ) : location.pathname === "/facebook" ? (
-                <Utama
+                <Main
                     gambar={gambar}
                     gambar_2={gambar_2}
                     text_1="THE MOST POPULAR"
@@ -62,7 +62,7 @@ const Social = () => {
                     id="facebook"
                 />
             ) : location.pathname === "/twitter" ? (
-                <Utama
+                <Main
                     gambar={twitter_logo}
                     gambar_2={twitter_text}
                     text_1="THE MICRO"
@@ -80,7 +80,7 @@ const Social = () => {
                     id="twitter"
                 />
             ) : location.pathname === "/linkedin" ? (
-                <Utama
+                <Main
                     gambar={linkedin_logo}
                     gambar_2={linkedin_text}
                     text_1="PROFESSIONAL"
@@ -98,7 +98,7 @@ const Social = () => {
                     id="linkedin"
                 />
             ) : location.pathname === "/pinterest" ? (
-                <Utama
+                <Main
                     gambar={pinterest_logo}
                     gambar_2={pinterest_text}
                     text_1="PINS"
@@ -116,7 +116,7 @@ const Social = () => {
                     id="pinterest"
                 />
             ) : location.pathname === "/snapchat" ? (
-                <Utama
+                <Main
                     gambar={snapchat_logo}
                     gambar_2={snapchat_text}
                     text_1="FILTER USE"
@@ -134,7 +134,7 @@ const Social = () => {
                     id="snapchat"
                 />
             ) : location.pathname === "/tiktok" ? (
-                <Utama
+                <Main
                     gambar={tiktok_logo}
                     gambar_2={tiktok_text}
                     text_1="THE NEWCOMER"
@@ -152,7 +152,7 @@ const Social = () => {
                     id="tiktok"
                 />
             ) : location.pathname === "/twitch" ? (
-                <Utama
+                <Main
                     gambar={twitch_logo}
                     gambar_2={twitch_text}
                     text_1="THE NUMBER #1"
@@ -170,7 +170,7 @@ const Social = () => {
                     id="twitch"
                 />
             ) : location.pathname === "/youtube" ? (
-                <Utama
+                <Main
                     gambar={youtube_logo}
                     gambar_2={youtube_text}
                     text_1="THE MOST VIDEO"

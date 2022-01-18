@@ -1,11 +1,14 @@
 import { FaAngleDown, FaDelicious, FaMinus, FaPlus } from "react-icons/fa";
 import styled from "styled-components";
 import "./app.css";
+import themeList from "../../config/themeList";
 
 const Inner = styled.div`
     position: absolute;
     padding: 1rem;
-    color: #c3c1cb;
+    color: ${({ theme: { theme } }) =>
+        theme === themeList.light ? "#000" : "#fff"};
+    font-size: 14px;
 `;
 
 const Header = styled.button`
@@ -20,7 +23,11 @@ const Header = styled.button`
     color: inherit;
     cursor: pointer;
     border-radius: ${(props) => (props.isActive ? "8px 8px 0px 0px" : "8px")};
-    box-shadow: rgb(2 12 27 / 70%) 0px 10px 30px -24px;
+
+    box-shadow: ${({ theme: { theme } }) =>
+        theme === themeList.light
+            ? "rgb(2 12 27 / 70%) 0px 10px 30px -24px"
+            : "rgb(0 0 0 / 70%) 0px 10px 30px -20px"};
     transition: all 0.2s;
 
     .icon_nya {
@@ -45,11 +52,14 @@ const Pembungkus = styled.div`
     gap: 20px;
     width: 100%;
     justify-content: space-between;
-    background-color: #fff;
+
     height: 100%;
     border-radius: ${(props) =>
         props.isActive ? "0px 8px 0px 0px" : "0px 8px 8px 0px"};
-    color: #000;
+    color: ${({ theme: { theme } }) =>
+        theme === themeList.light ? "#000" : "#fff"};
+    background-color: ${({ theme: { theme } }) =>
+        theme === themeList.light ? "#fff" : "#1f2937"};
     align-items: center;
     padding: 1rem;
     transition: all 0.2s;
@@ -77,16 +87,18 @@ const PembungkusSatu = styled.div`
     gap: 20px;
     width: 100%;
     justify-content: flex-start;
-    background-color: #fff;
+    color: ${({ theme: { theme } }) =>
+        theme === themeList.light ? "#000" : "#fff"};
+    background-color: ${({ theme: { theme } }) =>
+        theme === themeList.light ? "#fff" : "#1f2937"};
     height: 100%;
     border-radius: ${(props) => (props.isActive ? "8px 8px 0px 0px" : "8px")};
-    color: #000;
+
     align-items: center;
     padding: 1rem;
     transition: all 0.2s;
 
     .icon_nya_b {
-        /* background-color: aqua; */
         border-radius: 10px;
         padding: 13px;
         color: #fff;
@@ -122,8 +134,14 @@ const Content = styled.div`
     transition: height 0.35s;
     margin-top: -10px;
     border-radius: 0px 0px 5px 5px;
-    background-color: #fff;
-    box-shadow: rgb(2 12 27 / 70%) 0px 10px 30px -24px;
+    color: ${({ theme: { theme } }) =>
+        theme === themeList.light ? "#000" : "#fff"};
+    background-color: ${({ theme: { theme } }) =>
+        theme === themeList.light ? "#fff" : "#1f2937"};
+    box-shadow: ${({ theme: { theme } }) =>
+        theme === themeList.light
+            ? "rgb(2 12 27 / 70%) 0px 10px 30px -24px"
+            : "rgb(0 0 0 / 70%) 0px 10px 30px -20px"};
 `;
 
 const AcordionContent = ({
@@ -165,7 +183,7 @@ const AcordionContentTools = ({
     isActive,
     itemCaption,
     ItemLogo,
-    itemIconLogo,
+
     color,
 }) => {
     return (
@@ -176,8 +194,18 @@ const AcordionContentTools = ({
                         <ItemLogo />
                     </div>
                     <div className="heading_nya">
-                        <div className="heading_name">{itemName}</div>
-                        <div className="heading_caption">{itemCaption}</div>
+                        <div
+                            style={{ fontWeight: "400" }}
+                            className="heading_name"
+                        >
+                            {itemName}
+                        </div>
+                        <div
+                            style={{ fontWeight: "600", fontSize: "14px" }}
+                            className="heading_caption"
+                        >
+                            {itemCaption}
+                        </div>
                     </div>
                 </PembungkusSatu>
                 <HeaderIcon style={{ padding: "10px" }} isActive={isActive}>

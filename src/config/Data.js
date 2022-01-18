@@ -305,24 +305,187 @@ export const adviceData = {
 export const toolsData = {
     instagram: [
         {
-            name: "instagram",
-            caption: "Relevant Content Like Videos and Blog Posts",
+            name: "PRO",
+            caption: "Bussiness",
             content: "instagram",
-            icon_logo: FiTwitter,
             icon: FiTwitter,
         },
         {
-            name: "instagram_2",
-            caption: "Relevant Content Like Videos and Blog Posts",
+            name: "CREATION",
+            caption: "Canva",
             content: "instagram",
-            icon_logo: FiTwitter,
             icon: FiTwitter,
         },
         {
-            name: "instagram_3",
-            caption: "Relevant Content Like Videos and Blog Posts",
+            name: "ANALYZE",
+            caption: "Taillwind",
             content: "instagram",
-            icon_logo: FiTwitter,
+            icon: FiTwitter,
+        },
+    ],
+    facebook: [
+        {
+            name: "PROMOTE",
+            caption: "Meta for Bussiness",
+            content: "instagram",
+            icon: FiTwitter,
+        },
+        {
+            name: "REPORTING",
+            caption: "Insight",
+            content: "instagram",
+            icon: FiTwitter,
+        },
+        {
+            name: "MEASURE",
+            caption: "Pixel",
+            content: "instagram",
+            icon: FiTwitter,
+        },
+        {
+            name: "ANALYZE",
+            caption: "IQ",
+            content: "instagram",
+            icon: FiTwitter,
+        },
+    ],
+    twitter: [
+        {
+            name: "PRO",
+            caption: "Bussines",
+            content: "instagram",
+            icon: FiTwitter,
+        },
+        {
+            name: "POSTING",
+            caption: "Twetdeck",
+            content: "instagram",
+            icon: FiTwitter,
+        },
+        {
+            name: "ANALYZE",
+            caption: "Buffer",
+            content: "instagram",
+            icon: FiTwitter,
+        },
+        {
+            name: "BENCHMARK",
+            caption: "Talkwalker",
+            content: "instagram",
+            icon: FiTwitter,
+        },
+    ],
+    linkedin: [
+        {
+            name: "REPORTI",
+            caption: "Campaign Manager",
+            content: "instagram",
+            icon: FiTwitter,
+        },
+        {
+            name: "AUTOMATE",
+            caption: "Prospection",
+            content: "instagram",
+            icon: FiTwitter,
+        },
+        {
+            name: "ANALYZE",
+            caption: "LeadFuze",
+            content: "instagram",
+            icon: FiTwitter,
+        },
+    ],
+    pinterest: [
+        {
+            name: "PRO",
+            caption: "BISNIS",
+            content: "instagram",
+            icon: FiTwitter,
+        },
+        {
+            name: "CREATION",
+            caption: "Canva",
+            content: "instagram",
+            icon: FiTwitter,
+        },
+        {
+            name: "ANALYZE",
+            caption: "Tailwind",
+            content: "instagram",
+            icon: FiTwitter,
+        },
+    ],
+    snapchat: [
+        {
+            name: "ANALYZE",
+            caption: "Snaplytics",
+            content: "instagram",
+            icon: FiTwitter,
+        },
+        {
+            name: "WEBLINKS",
+            caption: "Paperclip",
+            content: "instagram",
+            icon: FiTwitter,
+        },
+    ],
+    tiktok: [
+        {
+            name: "CREATE",
+            caption: "LightMV",
+            content: "instagram",
+            icon: FiTwitter,
+        },
+        {
+            name: "EDIT",
+            caption: "BeeCut",
+            content: "instagram",
+            icon: FiTwitter,
+        },
+    ],
+    twitch: [
+        {
+            name: "ADS",
+            caption: "Advertising",
+            content: "instagram",
+            icon: FiTwitter,
+        },
+        {
+            name: "STUDIO",
+            caption: "Open Broadcast Software (OBS)",
+            content: "instagram",
+            icon: FiTwitter,
+        },
+        {
+            name: "LIVE",
+            caption: "StreamLabs",
+            content: "instagram",
+            icon: FiTwitter,
+        },
+        {
+            name: "CHATBOT",
+            caption: "NightBot",
+            content: "instagram",
+            icon: FiTwitter,
+        },
+    ],
+    youtube: [
+        {
+            name: "ANALYZE",
+            caption: "Analytics",
+            content: "instagram",
+            icon: FiTwitter,
+        },
+        {
+            name: "BOOST",
+            caption: "ToobBuddy",
+            content: "instagram",
+            icon: FiTwitter,
+        },
+        {
+            name: "EDIT",
+            caption: "KineMaster",
+            content: "instagram",
             icon: FiTwitter,
         },
     ],

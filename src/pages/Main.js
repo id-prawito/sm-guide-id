@@ -107,7 +107,10 @@ const Utama = ({
                         <FiMoreHorizontal className="icon" />
                     </div>
                     <div className="audience_card">
-                        <div className="card">
+                        <div
+                            style={{ outline: `1px solid ${color}` }}
+                            className="card"
+                        >
                             <div className="judul">ACTIVE USER</div>
                             <div style={{ color: color }} className="angkanya">
                                 <div className="angka">{angka_user}</div>
@@ -130,7 +133,10 @@ const Utama = ({
                                         </div>
                                     </div>
                                 </div>
-                                <div className="content_dua">
+                                <div
+                                    style={{ outline: `1px solid ${color}` }}
+                                    className="content_dua"
+                                >
                                     <div className="judul">
                                         GENDER PREPARATION
                                     </div>
@@ -161,7 +167,10 @@ const Utama = ({
                                 </div>
                             </div>
                         </div>
-                        <div className="card">
+                        <div
+                            style={{ outline: `1px solid ${color}` }}
+                            className="card"
+                        >
                             <div className="judul">KEY FIGURES</div>
                             <div style={{ color: color }} className="angkanya">
                                 <div className="angka">{angka_key}</div>

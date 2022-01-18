@@ -1,21 +1,37 @@
 import styled from "styled-components";
+import themeList from "../../config/themeList";
+
 export const CheckBoxWrapper = styled.div`
     position: relative;
 `;
 
 export const Card = styled.div`
-    background-color: #fff;
-    color: #000;
+    /* background-color: #fff; */
+
+    background-color: ${({ theme: { theme } }) =>
+        theme === themeList.light ? "#fff" : "#1f2937"};
+    /* color: #000; */
+
+    color: ${({ theme: { theme } }) =>
+        theme === themeList.light ? "#000" : "#fff"};
     border-radius: 8px;
     height: 35px;
     padding-left: 20px;
     padding-right: 20px;
     align-items: center;
     display: flex;
-    box-shadow: rgb(2 12 27 / 70%) 0px 10px 30px -15px;
+    box-shadow: ${({ theme: { theme } }) =>
+        theme === themeList.light
+            ? "rgb(2 12 27 / 70%) 0px 10px 30px -15px"
+            : "rgb(0 0 0 / 70%) 0px 10px 30px -20px"};
     outline: ${(props) => (props.color ? props.color : "#e2513a")} 1px solid;
     justify-content: space-between;
     position: relative;
+
+    .warnanya {
+        color: ${({ theme: { theme } }) =>
+            theme === themeList.light ? "#000" : "#fff"};
+    }
 `;
 
 export const CheckBoxLabel = styled.label`
