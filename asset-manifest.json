@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/sm-guide-id/static/css/main.840d2db5.css",
-    "main.js": "/sm-guide-id/static/js/main.8f999fa6.js",
+    "main.js": "/sm-guide-id/static/js/main.fcc7b384.js",
     "static/media/snapchat_text.svg": "/sm-guide-id/static/media/snapchat_text.6c00dd5616480d000b35714d41b8c1c0.svg",
     "static/media/instagram_logo.svg": "/sm-guide-id/static/media/instagram_logo.1a0dbe60f4ca7af6aa08f9ffb53211b6.svg",
     "static/media/instagram_text.svg": "/sm-guide-id/static/media/instagram_text.b6801e4c693a4805697bad70c4f6885c.svg",
@@ -22,10 +22,10 @@
     "static/media/twitch_logo.svg": "/sm-guide-id/static/media/twitch_logo.362050ca379e5457ab7d9ab81ee30e56.svg",
     "static/media/facebook_logo.svg": "/sm-guide-id/static/media/facebook_logo.9b2a83c9d1559084b38b710daef7d3f7.svg",
     "main.840d2db5.css.map": "/sm-guide-id/static/css/main.840d2db5.css.map",
-    "main.8f999fa6.js.map": "/sm-guide-id/static/js/main.8f999fa6.js.map"
+    "main.fcc7b384.js.map": "/sm-guide-id/static/js/main.fcc7b384.js.map"
   },
   "entrypoints": [
     "static/css/main.840d2db5.css",
-    "static/js/main.8f999fa6.js"
+    "static/js/main.fcc7b384.js"
   ]
 }
