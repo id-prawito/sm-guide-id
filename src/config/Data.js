@@ -17,11 +17,17 @@ import {
     FiShare2,
     FiSmile,
     FiTarget,
+    FiGitPullRequest,
+    FiLink2,
 } from "react-icons/fi";
 
 import {
+    FaBullhorn,
+    FaBuysellads,
+    FaDelicious,
     FaImages,
     FaInstagram,
+    FaInstagramSquare,
     FaPinterestP,
     FaRegChartBar,
     FaRegClone,
@@ -29,16 +35,53 @@ import {
     FaSnapchatGhost,
     FaTiktok,
     FaTv,
+    FaTwitterSquare,
 } from "react-icons/fa";
 
 import {
+    BsAppIndicator,
     BsArrowCounterclockwise,
+    BsBezier2,
+    BsCast,
+    BsEye,
     BsFilter,
+    BsFunnel,
+    BsJournalCheck,
+    BsMegaphone,
     BsMic,
+    BsPatchCheck,
     BsPinAngle,
+    BsPinterest,
+    BsTools,
+    BsUiChecks,
 } from "react-icons/bs";
 
-import { MdOutlineTimelapse } from "react-icons/md";
+import {
+    BiCategoryAlt,
+    BiCustomize,
+    BiExtension,
+    BiHive,
+    BiScreenshot,
+    BiShare,
+    BiShoppingBag,
+    BiSlider,
+    BiTargetLock,
+    BiVideo,
+} from "react-icons/bi";
+
+import {
+    MdAutoGraph,
+    MdDynamicForm,
+    MdOutlineAmpStories,
+    MdOutlineAnalytics,
+    MdOutlineProductionQuantityLimits,
+    MdOutlineTimelapse,
+    MdPostAdd,
+    MdQueuePlayNext,
+} from "react-icons/md";
+
+import { GiMoebiusTrefoil } from "react-icons/gi";
+import { SiCanva, SiChatbot } from "react-icons/si";
 
 const sidebarNav = [
     {
@@ -107,6 +150,29 @@ export const adviceData = {
     instagram: [
         {
             content: "Show case your over",
+            icon: FaImages,
+        },
+        {
+            content: "Build a universe around your brand.",
+            icon: FaRegEye,
+        },
+        {
+            content:
+                "Be spontaneous & authentic with stories & instagram Lives",
+            icon: FiVideo,
+        },
+        {
+            content: "Use Influncers to reach relevant communities.",
+            icon: FiUsers,
+        },
+        {
+            content: "Study & use relevant hastags.",
+            icon: FiMaximize,
+        },
+    ],
+    home: [
+        {
+            content: "Build a universe around your brand.",
             icon: FaImages,
         },
         {
@@ -305,22 +371,67 @@ export const adviceData = {
 export const toolsData = {
     instagram: [
         {
-            name: "PRO",
+            name: "E-COMMERCE",
             caption: "Bussiness",
             content: "instagram",
-            icon: FiTwitter,
+            icon: BiShoppingBag,
         },
         {
-            name: "CREATION",
+            name: "PRO INSTAGRAM",
             caption: "Canva",
             content: "instagram",
-            icon: FiTwitter,
+            icon: FaInstagramSquare,
         },
         {
-            name: "ANALYZE",
-            caption: "Taillwind",
+            name: "PRODUCT PAGE",
+            caption: "Snappt",
             content: "instagram",
-            icon: FiTwitter,
+            icon: MdOutlineProductionQuantityLimits,
+        },
+        {
+            name: "STORIES",
+            caption: "Mojo",
+            content: "instagram",
+            icon: MdOutlineAmpStories,
+        },
+        {
+            name: "VIDEO EDITING",
+            caption: "In Shot",
+            content: "instagram",
+            icon: BiScreenshot,
+        },
+    ],
+
+    home: [
+        {
+            name: "1",
+            caption: " ",
+            content: " ",
+            icon: BiShoppingBag,
+        },
+        {
+            name: "2",
+            caption: " ",
+            content: " ",
+            icon: FaInstagramSquare,
+        },
+        {
+            name: "3",
+            caption: " ",
+            content: " ",
+            icon: MdOutlineProductionQuantityLimits,
+        },
+        {
+            name: "4",
+            caption: " ",
+            content: " ",
+            icon: MdOutlineAmpStories,
+        },
+        {
+            name: "5",
+            caption: " ",
+            content: " ",
+            icon: BiScreenshot,
         },
     ],
     facebook: [
@@ -328,105 +439,105 @@ export const toolsData = {
             name: "PROMOTE",
             caption: "Meta for Bussiness",
             content: "instagram",
-            icon: FiTwitter,
+            icon: FaBullhorn,
         },
         {
             name: "REPORTING",
             caption: "Insight",
             content: "instagram",
-            icon: FiTwitter,
+            icon: BsCast,
         },
         {
             name: "MEASURE",
             caption: "Pixel",
             content: "instagram",
-            icon: FiTwitter,
+            icon: BsFunnel,
         },
         {
-            name: "ANALYZE",
+            name: "ANALYZE FACEBOOK",
             caption: "IQ",
             content: "instagram",
-            icon: FiTwitter,
+            icon: MdOutlineAnalytics,
         },
     ],
     twitter: [
         {
-            name: "PRO",
+            name: "PRO TWITTER",
             caption: "Bussines",
             content: "instagram",
-            icon: FiTwitter,
+            icon: FaTwitterSquare,
         },
         {
             name: "POSTING",
             caption: "Twetdeck",
             content: "instagram",
-            icon: FiTwitter,
+            icon: MdPostAdd,
         },
         {
-            name: "ANALYZE",
+            name: "ANALYZE TWITTER",
             caption: "Buffer",
             content: "instagram",
-            icon: FiTwitter,
+            icon: MdOutlineAnalytics,
         },
         {
             name: "BENCHMARK",
             caption: "Talkwalker",
             content: "instagram",
-            icon: FiTwitter,
+            icon: MdDynamicForm,
         },
     ],
     linkedin: [
         {
-            name: "REPORTI",
+            name: "REPORTING",
             caption: "Campaign Manager",
             content: "instagram",
-            icon: FiTwitter,
+            icon: BsBezier2,
         },
         {
             name: "AUTOMATE",
             caption: "Prospection",
             content: "instagram",
-            icon: FiTwitter,
+            icon: BsFunnel,
         },
         {
-            name: "ANALYZE",
+            name: "ANALYZE LINKEDIN",
             caption: "LeadFuze",
             content: "instagram",
-            icon: FiTwitter,
+            icon: MdOutlineAnalytics,
         },
     ],
     pinterest: [
         {
-            name: "PRO",
+            name: "PRO PINTEREST",
             caption: "BISNIS",
             content: "instagram",
-            icon: FiTwitter,
+            icon: BsPinterest,
         },
         {
             name: "CREATION",
             caption: "Canva",
             content: "instagram",
-            icon: FiTwitter,
+            icon: SiCanva,
         },
         {
-            name: "ANALYZE",
+            name: "ANALYZE PINTEREST",
             caption: "Tailwind",
             content: "instagram",
-            icon: FiTwitter,
+            icon: MdOutlineAnalytics,
         },
     ],
     snapchat: [
         {
-            name: "ANALYZE",
+            name: "ANALYZE SNAPCHAT",
             caption: "Snaplytics",
             content: "instagram",
-            icon: FiTwitter,
+            icon: MdOutlineAnalytics,
         },
         {
             name: "WEBLINKS",
             caption: "Paperclip",
             content: "instagram",
-            icon: FiTwitter,
+            icon: FiLink2,
         },
     ],
     tiktok: [
@@ -434,13 +545,13 @@ export const toolsData = {
             name: "CREATE",
             caption: "LightMV",
             content: "instagram",
-            icon: FiTwitter,
+            icon: MdQueuePlayNext,
         },
         {
             name: "EDIT",
             caption: "BeeCut",
             content: "instagram",
-            icon: FiTwitter,
+            icon: FaDelicious,
         },
     ],
     twitch: [
@@ -448,45 +559,248 @@ export const toolsData = {
             name: "ADS",
             caption: "Advertising",
             content: "instagram",
-            icon: FiTwitter,
+            icon: FaBuysellads,
         },
         {
             name: "STUDIO",
             caption: "Open Broadcast Software (OBS)",
             content: "instagram",
-            icon: FiTwitter,
+            icon: BiCategoryAlt,
         },
         {
             name: "LIVE",
             caption: "StreamLabs",
             content: "instagram",
-            icon: FiTwitter,
+            icon: GiMoebiusTrefoil,
         },
         {
             name: "CHATBOT",
             caption: "NightBot",
             content: "instagram",
-            icon: FiTwitter,
+            icon: SiChatbot,
         },
     ],
     youtube: [
         {
-            name: "ANALYZE",
+            name: "ANALYZE YOUTUBE",
             caption: "Analytics",
             content: "instagram",
-            icon: FiTwitter,
+            icon: MdOutlineAnalytics,
         },
         {
             name: "BOOST",
-            caption: "ToobBuddy",
+            caption: "TubeBuddy",
             content: "instagram",
-            icon: FiTwitter,
+            icon: FaDelicious,
         },
         {
             name: "EDIT",
             caption: "KineMaster",
             content: "instagram",
-            icon: FiTwitter,
+            icon: FaDelicious,
+        },
+    ],
+};
+
+export const goalsData = {
+    home: [
+        {
+            name: "1",
+            caption: " ",
+            content: " ",
+            icon: FiStar,
+        },
+        {
+            name: "2",
+            caption: " ",
+            content: "",
+            icon: FiSliders,
+        },
+        {
+            name: "3",
+            caption: " ",
+            content: "",
+            icon: BsAppIndicator,
+        },
+    ],
+    instagram: [
+        {
+            name: "Highlighting",
+            caption: "Your activity, your feed represent your identity",
+            content: "instagram",
+            icon: FiStar,
+        },
+        {
+            name: "Showcase Instagram",
+            caption: "Your products and your universe",
+            content: "instagram",
+            icon: FiSliders,
+        },
+        {
+            name: "Link with your community",
+            caption: "By showing the backstage of your company",
+            content: "instagram",
+            icon: BsAppIndicator,
+        },
+    ],
+    facebook: [
+        {
+            name: "Build",
+            caption: "Communicaty & user loyalty",
+            content: "instagram",
+            icon: BsTools,
+        },
+        {
+            name: "Share",
+            caption: "Relevant content like videos & blog posts",
+            content: "instagram",
+            icon: BiShare,
+        },
+        {
+            name: "Showcase Facebook",
+            caption: "Your products and offres. Information about your company",
+            content: "instagram",
+            icon: BiExtension,
+        },
+    ],
+    twitter: [
+        {
+            name: "Online Monitoring",
+            caption: "& e-reputation control",
+            content: "instagram",
+            icon: FaRegEye,
+        },
+        {
+            name: "React to the news",
+            caption: "and interect with your community",
+            content: "instagram",
+            icon: FiMessageSquare,
+        },
+        {
+            name: "Improve your visibility",
+            caption: "Buffer",
+            content: "instagram",
+            icon: BiHive,
+        },
+    ],
+    linkedin: [
+        {
+            name: "Develop your network",
+            caption: "& prospect",
+            content: "instagram",
+            icon: FiShare2,
+        },
+        {
+            name: "Promote your bussiness",
+            caption: "Show your expertise & improve your visibility",
+            content: "instagram",
+            icon: FiEdit3,
+        },
+        {
+            name: "Share industry-related content",
+            caption: "and promote your company's universe",
+            content: "instagram",
+            icon: FiUsers,
+        },
+    ],
+    pinterest: [
+        {
+            name: "Showcase your products",
+            caption: "& gain visibility",
+            content: "instagram",
+            icon: BsEye,
+        },
+        {
+            name: "Generate traffic",
+            caption: "on your website & improve your SEO",
+            content: "instagram",
+            icon: BiSlider,
+        },
+        {
+            name: "Generate Leads",
+            caption: "",
+            content: "instagram",
+            icon: BiTargetLock,
+        },
+    ],
+    snapchat: [
+        {
+            name: "Bond with your community",
+            caption: "and show case your universe",
+            content: "instagram",
+            icon: BsPatchCheck,
+        },
+        {
+            name: "Create & share",
+            caption: "viral content",
+            content: "instagram",
+            icon: BiShare,
+        },
+        {
+            name: "Show your creativity",
+            caption: "promote your products",
+            content: "instagram",
+            icon: BiCustomize,
+        },
+    ],
+    tiktok: [
+        {
+            name: "Create challenges",
+            caption: "relevant to your company and community",
+            content: "instagram",
+            icon: BsMegaphone,
+        },
+        {
+            name: "Create and share",
+            caption: "to bond with the youngers generatuions",
+            content: "instagram",
+            icon: BsUiChecks,
+        },
+        {
+            name: "Humanize your company",
+            caption: "and communicate with the platform's users",
+            content: "instagram",
+            icon: BsAppIndicator,
+        },
+    ],
+    twitch: [
+        {
+            name: "Target a young & connected auidience",
+            caption: "refreshing your company's image",
+            content: "instagram",
+            icon: FiTarget,
+        },
+        {
+            name: "Stand out from the competition",
+            caption: "by inventing & innovating",
+            content: "instagram",
+            icon: FiGitPullRequest,
+        },
+        {
+            name: "Showcase your expertise",
+            caption: "& reinforce your company's trust",
+            content: "instagram",
+            icon: BsEye,
+        },
+    ],
+    youtube: [
+        {
+            name: "Build and federate",
+            caption: "a communicaty, gain notorienty & virality",
+            content: "instagram",
+            icon: BsJournalCheck,
+        },
+        {
+            name: "Enchange your SEO",
+            caption: "& bring traffic, humanize your bussines",
+            content: "instagram",
+            icon: MdAutoGraph,
+        },
+        {
+            name: "Showcase your products",
+            caption: "& bring a new dimension to your company",
+            content: "instagram",
+            icon: BiVideo,
         },
     ],
 };

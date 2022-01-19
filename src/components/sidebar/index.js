@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 import ThemeSwitcher from "../../config/ThemeSwicter";
-import { SidebarMain } from "./SidebarElements";
+import { MenuItem, SidebarMain } from "./SidebarElements";
 import { FiX, FiLogOut } from "react-icons/fi";
 import { Link, useLocation } from "react-router-dom";
 import sidebarNav from "../../config/Data";
@@ -27,25 +27,42 @@ const Sidebar = () => {
                 ? "#b42694"
                 : location.pathname === "/facebook"
                 ? "#4267B2"
+                : location.pathname === "/twitter"
+                ? "#1DA1F2"
+                : location.pathname === "/linkedin"
+                ? "#0e76a8"
+                : location.pathname === "/pinterest"
+                ? "#F0002A"
+                : location.pathname === "/snapchat"
+                ? "#dfdd00"
+                : location.pathname === "/tiktok"
+                ? "#69C9D0"
+                : location.pathname === "/twitch"
+                ? "#9147fe"
+                : location.pathname === "/youtube"
+                ? "#ff0000"
+                : location.pathname === "/"
+                ? "#7e7e7e"
                 : null}
         </>
     );
+
+    const warna_object = warna.props.children;
+
     return (
-        <SidebarMain color={warna}>
+        <SidebarMain color={warna_object}>
             <div className="sidebar">
                 <div className="sidebar__logo">
                     <img src={logo} alt="logo" />
-
                     <div className="sidebar-close">
                         <FiX />
                     </div>
                 </div>
                 <div className="sidebar__menu">
                     {sidebarNav.map((item, index) => (
-                        <div
-                            className={`menu_item ${
-                                activeIndex === index && "active"
-                            }`}
+                        <MenuItem
+                            color={warna_object}
+                            className={`${activeIndex === index && "active"}`}
                             key={`nav-${index}`}
                         >
                             <div className="menu_icon">
@@ -54,9 +71,9 @@ const Sidebar = () => {
                             <div className="menu_text">
                                 <Link to={item.link}>{item.text}</Link>
                             </div>
-                        </div>
+                        </MenuItem>
                     ))}
-                    <div className="menu_item">
+                    <MenuItem color={warna_object} className="menu_item">
                         <div className="pembungkus">
                             <div className="bungkus">
                                 <div className="menu_icon">
@@ -66,7 +83,7 @@ const Sidebar = () => {
                             </div>
                             <ThemeSwitcher />
                         </div>
-                    </div>
+                    </MenuItem>
                 </div>
             </div>
         </SidebarMain>

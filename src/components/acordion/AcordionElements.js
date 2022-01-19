@@ -1,4 +1,4 @@
-import { FaAngleDown, FaDelicious, FaMinus, FaPlus } from "react-icons/fa";
+import { FaAngleDown, FaMinus, FaPlus } from "react-icons/fa";
 import styled from "styled-components";
 import "./app.css";
 import themeList from "../../config/themeList";
@@ -150,18 +150,24 @@ const AcordionContent = ({
     itemContent,
     isActive,
     itemCaption,
+    ItemLogo,
     color,
 }) => {
     return (
         <>
             <Header isActive={isActive} onClick={onClick} color={color}>
                 <div className="icon_nya">
-                    <FaDelicious />
+                    <ItemLogo />
                 </div>
                 <Pembungkus isActive={isActive}>
                     <div className="heading_nya">
                         <div className="heading_name">{itemName}</div>
-                        <div className="heading_caption">{itemCaption}</div>
+                        <div
+                            style={{ fontSize: "14px" }}
+                            className="heading_caption"
+                        >
+                            {itemCaption}
+                        </div>
                     </div>
 
                     <HeaderIcon isActive={isActive}>
@@ -183,7 +189,6 @@ const AcordionContentTools = ({
     isActive,
     itemCaption,
     ItemLogo,
-
     color,
 }) => {
     return (

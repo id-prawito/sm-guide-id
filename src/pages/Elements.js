@@ -160,7 +160,7 @@ export const SocialMain = styled.div`
                             flex-direction: column;
                             justify-content: space-between;
                             height: 100%;
-                            width: 140px;
+                            width: 170px;
                             padding: 10px;
                             color: #fff;
                             border-radius: 8px;

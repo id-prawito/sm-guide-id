@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { AcordionContent, AcordionContentTools } from "./AcordionElements";
-import { toolsData } from "../../config/Data";
+import { goalsData, toolsData } from "../../config/Data";
 import { useLocation } from "react-router-dom";
 
 const Acordion = ({ items, color }) => {
@@ -23,6 +23,7 @@ const Acordion = ({ items, color }) => {
                         itemCaption={item.caption}
                         itemName={item.name}
                         itemContent={item.content}
+                        ItemLogo={item.icon}
                         isActive={isActive}
                     />
                 );
@@ -61,27 +62,31 @@ const AcordionTools = ({ items, color }) => {
 };
 
 const Render = ({ color }) => {
-    let items = [
-        {
-            name: "Header 1",
-            caption: "Comunity and User Loyalti",
-            content: <div>Lorem Inpsum</div>,
-        },
-        {
-            name: "Header 2",
-            caption: "Relevant Content Like Videos and Blog Posts",
-            content: <div>Lorem Inpsum</div>,
-        },
-        {
-            name: "Header 3",
-            caption: "Your Product and Offers",
-            content: <div>Lorem Inpsum</div>,
-        },
-    ];
+    const location = useLocation();
 
     return (
         <div className="container">
-            <Acordion items={items} color={color} />
+            {location.pathname === "/instagram" ? (
+                <Acordion items={goalsData.instagram} color={color} />
+            ) : location.pathname === "/facebook" ? (
+                <Acordion items={goalsData.facebook} color={color} />
+            ) : location.pathname === "/twitter" ? (
+                <Acordion items={goalsData.twitter} color={color} />
+            ) : location.pathname === "/linkedin" ? (
+                <Acordion items={goalsData.linkedin} color={color} />
+            ) : location.pathname === "/pinterest" ? (
+                <Acordion items={goalsData.pinterest} color={color} />
+            ) : location.pathname === "/snapchat" ? (
+                <Acordion items={goalsData.snapchat} color={color} />
+            ) : location.pathname === "/tiktok" ? (
+                <Acordion items={goalsData.tiktok} color={color} />
+            ) : location.pathname === "/twitch" ? (
+                <Acordion items={goalsData.twitch} color={color} />
+            ) : location.pathname === "/youtube" ? (
+                <Acordion items={goalsData.youtube} color={color} />
+            ) : location.pathname === "/" ? (
+                <Acordion items={goalsData.home} color={color} />
+            ) : null}
         </div>
     );
 };
@@ -91,7 +96,7 @@ export const RenderTools = ({ color }) => {
 
     const location = useLocation();
 
-    console.log(location.pathname);
+    // console.log(location.pathname);
 
     return (
         <div className="container">
@@ -113,9 +118,9 @@ export const RenderTools = ({ color }) => {
                 <AcordionTools items={toolsData.twitch} color={color} />
             ) : location.pathname === "/youtube" ? (
                 <AcordionTools items={toolsData.youtube} color={color} />
+            ) : location.pathname === "/" ? (
+                <AcordionTools items={toolsData.home} color={color} />
             ) : null}
-
-            {/* <AcordionTools items={toolsData.instagram} color={color} /> */}
         </div>
     );
 };

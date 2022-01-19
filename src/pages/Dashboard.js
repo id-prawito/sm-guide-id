@@ -1,78 +1,29 @@
-import React, { useState, useReducer } from "react";
-
-const formReducer = (state, event) => {
-    return {
-        ...state,
-        bisa: event.value,
-    };
-};
+import React from "react";
+import { MainPageHome } from "./Main";
+import instagram_logo from "../assets/img/instagram_logo.svg";
+import instagram_text from "../assets/img/instagram_text.svg";
+import instagram_text_white from "../assets/img/instagram_text_white.svg";
 
 const Dashboard = () => {
-    // const [title, setTitle] = useState("");
-    const [formData, setFormData] = useReducer(formReducer, {});
-    const [submitting, setSubmitting] = useState(false);
-    const [random, setRandom] = useState(0);
-
-    const handleClick = () => {
-        setRandom(Math.floor(Math.random() * (1 - 0 + 1)) + 0);
-    };
-
-    const handleSubmit = (event) => {
-        event.preventDefault();
-        setSubmitting(true);
-
-        setTimeout(() => {
-            setSubmitting(false);
-        }, 3000);
-    };
-
-    const handleChange = (event) => {
-        setFormData({
-            value: event.target.value,
-        });
-    };
-
-    console.log(Object.entries(formData));
-
     return (
-        <div>
-            <button onClick={handleClick}>Click Me {random}</button>
-
-            {random === 1 ? (
-                <div style={{ color: "#000", marginTop: "20px" }}>
-                    <p>
-                        Anda berhasil menangkap Pokomen, tampilkan modal input
-                        name
-                    </p>
-                    <form onSubmit={handleSubmit}>
-                        <label>
-                            <input name="name" onChange={handleChange} />
-                        </label>
-                        <button type="submit">Submit</button>
-                    </form>
-                </div>
-            ) : (
-                <div style={{ color: "#000", marginTop: "20px" }}>
-                    <p>
-                        Sorry, anda tidak berhasil mengangkap pokemon ini, mau
-                        coba lagi, button close.
-                    </p>
-                </div>
-            )}
-
-            {submitting && (
-                <div style={{ color: "#000", marginTop: "20px" }}>
-                    You are submitting the following:
-                    <ul>
-                        {Object.entries(formData).map(([name, value]) => (
-                            <li key={name}>
-                                <strong>{name}</strong>:{value.toString()}
-                            </li>
-                        ))}
-                    </ul>
-                </div>
-            )}
-        </div>
+        <MainPageHome
+            gambar={instagram_logo}
+            gambar_2={instagram_text}
+            gambar_white={instagram_text_white}
+            text_1=""
+            text_2=""
+            color="#7e7e7e"
+            angka_user=""
+            angka_text_user=""
+            angka_age=""
+            angka_text_age=""
+            angka_gender_woman=""
+            angka_gender_man=""
+            angka_key=""
+            angka_text_key=""
+            add_text=""
+            id="home"
+        />
     );
 };
 

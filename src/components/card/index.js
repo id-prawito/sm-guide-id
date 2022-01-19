@@ -105,6 +105,25 @@ const Card = ({ id, color }) => {
                         </div>
                     ))}
                 </>
+            ) : id === "home" ? (
+                <>
+                    {adviceData.home.map((item, i) => (
+                        <div className="card_nya" key={i}>
+                            <div
+                                style={{ display: "none" }}
+                                className="icon_advice"
+                            >
+                                <item.icon color={color} />
+                            </div>
+                            <div
+                                style={{ display: "none" }}
+                                className="content_advice"
+                            >
+                                {item.content}
+                            </div>
+                        </div>
+                    ))}
+                </>
             ) : null}
         </>
     );
