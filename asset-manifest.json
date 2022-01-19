@@ -1,17 +1,22 @@
 {
   "files": {
     "main.css": "/sm-guide-id/static/css/main.840d2db5.css",
-    "main.js": "/sm-guide-id/static/js/main.fcc7b384.js",
+    "main.js": "/sm-guide-id/static/js/main.fe7c02d5.js",
     "static/media/snapchat_text.svg": "/sm-guide-id/static/media/snapchat_text.6c00dd5616480d000b35714d41b8c1c0.svg",
     "static/media/instagram_logo.svg": "/sm-guide-id/static/media/instagram_logo.1a0dbe60f4ca7af6aa08f9ffb53211b6.svg",
+    "static/media/snapchat_text_white.svg": "/sm-guide-id/static/media/snapchat_text_white.0c82e184bd5ea31135b3b29f9d6c77ff.svg",
     "static/media/instagram_text.svg": "/sm-guide-id/static/media/instagram_text.b6801e4c693a4805697bad70c4f6885c.svg",
+    "static/media/instagram_text_white.svg": "/sm-guide-id/static/media/instagram_text_white.ea4927e7ab41c227690b031e796a80ba.svg",
     "static/media/twitter_text.svg": "/sm-guide-id/static/media/twitter_text.92515305df7bf7a28f5915de9f74d0cf.svg",
-    "static/media/tiktok_text.svg": "/sm-guide-id/static/media/tiktok_text.e038a09b619203ade91191df58b8b26b.svg",
     "static/media/tiktok_logo.svg": "/sm-guide-id/static/media/tiktok_logo.a6474de53b794d29c73804a0452872d2.svg",
+    "static/media/youtube_text_white.svg": "/sm-guide-id/static/media/youtube_text_white.101b7c06f8d2ffd451d1d3b2a325cb52.svg",
     "static/media/pinterest_text.svg": "/sm-guide-id/static/media/pinterest_text.7c07bef6862b000652e4e4302ecfba3e.svg",
     "static/media/youtube_text.svg": "/sm-guide-id/static/media/youtube_text.9beffa6c0c84aef6184e810350c03bac.svg",
+    "static/media/tiktok_text.svg": "/sm-guide-id/static/media/tiktok_text.e04a6640cb3fd6db4e1cead189a3e30d.svg",
+    "static/media/tiktok_text_white.svg": "/sm-guide-id/static/media/tiktok_text_white.56d54d753a9e719a65054f123ef89d56.svg",
     "static/media/facebook_text.svg": "/sm-guide-id/static/media/facebook_text.657fe1876b567b18ec87f9008a9e0642.svg",
     "static/media/linkedin_text.svg": "/sm-guide-id/static/media/linkedin_text.a00e74e95bfe4ec61e2074c9f74517cd.svg",
+    "static/media/linkedin_text_white.svg": "/sm-guide-id/static/media/linkedin_text_white.e8875e91ed343c2c950211f2526a0f7b.svg",
     "index.html": "/sm-guide-id/index.html",
     "static/media/twitch_text.svg": "/sm-guide-id/static/media/twitch_text.0fe4c911096352eb181b9712d3469f19.svg",
     "static/media/snapchat_logo.svg": "/sm-guide-id/static/media/snapchat_logo.c0e0bdee1ddbc69245b829bba424cf91.svg",
@@ -22,10 +27,10 @@
     "static/media/twitch_logo.svg": "/sm-guide-id/static/media/twitch_logo.362050ca379e5457ab7d9ab81ee30e56.svg",
     "static/media/facebook_logo.svg": "/sm-guide-id/static/media/facebook_logo.9b2a83c9d1559084b38b710daef7d3f7.svg",
     "main.840d2db5.css.map": "/sm-guide-id/static/css/main.840d2db5.css.map",
-    "main.fcc7b384.js.map": "/sm-guide-id/static/js/main.fcc7b384.js.map"
+    "main.fe7c02d5.js.map": "/sm-guide-id/static/js/main.fe7c02d5.js.map"
   },
   "entrypoints": [
     "static/css/main.840d2db5.css",
-    "static/js/main.fcc7b384.js"
+    "static/js/main.fe7c02d5.js"
   ]
 }
