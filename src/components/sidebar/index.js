@@ -4,7 +4,7 @@ import { MenuItem, SidebarMain } from "./SidebarElements";
 import { FiX, FiLogOut } from "react-icons/fi";
 import { Link, useLocation } from "react-router-dom";
 import sidebarNav from "../../config/Data";
-import logo from "../../assets/img/logo.png";
+import logo from "../../assets/img/logo512.png";
 
 const Sidebar = () => {
     const [activeIndex, setActiveIndex] = useState(0);
