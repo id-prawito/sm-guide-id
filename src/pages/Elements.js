@@ -1,5 +1,6 @@
 import styled from "styled-components";
 import themeList from "../config/themeList";
+import { devices } from "../assets/scss/_media";
 
 export const SocialMain = styled.div`
     width: 100%;
@@ -8,7 +9,13 @@ export const SocialMain = styled.div`
     display: grid;
     justify-content: space-between;
     grid-template-columns: 60% 40%;
-    /* gap: 40px; */
+
+    --color: ${(props) => (props.color ? props.color : "#e2513a")};
+
+    ${devices.smartphone} {
+        display: flex;
+        flex-direction: column;
+    }
 
     .text {
         font-size: 18px;
@@ -34,6 +41,14 @@ export const SocialMain = styled.div`
         gap: 40px;
         width: 100%;
         padding-right: 50px;
+        border-right: 1px solid var(--color);
+
+        ${devices.smartphone} {
+            border-bottom: 1px solid var(--color);
+            border-right: none;
+            padding: 20px;
+            width: 100%;
+        }
 
         .content_date {
             display: grid;
@@ -41,8 +56,17 @@ export const SocialMain = styled.div`
             align-items: center;
             gap: 40px;
 
+            ${devices.smartphone} {
+                display: flex;
+                flex-direction: column;
+            }
+
             .card_images {
                 width: 100%;
+
+                ${devices.smartphone} {
+                    width: auto;
+                }
             }
 
             .card_publish {
@@ -63,9 +87,9 @@ export const SocialMain = styled.div`
                     width: 100%;
                     padding: 6px 20px;
                     border-radius: 8px;
-                    /* height: 30px; */
+
                     align-items: center;
-                    /* background-color: #808080; */
+
                     color: #fff;
 
                     .text {
@@ -94,6 +118,10 @@ export const SocialMain = styled.div`
             flex-direction: column;
             gap: 20px;
 
+            ${devices.smartphone} {
+                height: 60vh;
+            }
+
             .audience_heading {
                 display: flex;
                 justify-content: space-between;
@@ -104,9 +132,14 @@ export const SocialMain = styled.div`
                 display: grid;
                 width: 100%;
                 grid-template-columns: 24% 48% 24%;
-                /* gap: 10px; */
                 height: 200px;
                 justify-content: space-between;
+
+                ${devices.smartphone} {
+                    grid-template-rows: auto;
+                    grid-template-columns: none;
+                    gap: 20px;
+                }
 
                 .card_tengah {
                     border-radius: 8px;
@@ -349,6 +382,12 @@ export const SocialMain = styled.div`
         width: 100%;
         align-items: stretch;
         gap: 40px;
+
+        ${devices.smartphone} {
+            padding: 20px 20px 50px 20px;
+            width: 100%;
+            height: 125vh;
+        }
 
         .advice {
             display: flex;

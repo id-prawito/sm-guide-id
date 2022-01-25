@@ -28,11 +28,8 @@ const MainPage = ({
     const saved = localStorage.getItem("theme");
 
     return (
-        <SocialMain>
-            <div
-                style={{ borderRight: `1px solid ${color}` }}
-                className="social_content"
-            >
+        <SocialMain color={color}>
+            <div className="social_content">
                 <div className="content_date">
                     <div className="card_images">
                         <div

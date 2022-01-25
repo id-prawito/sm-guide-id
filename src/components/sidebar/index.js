@@ -49,12 +49,21 @@ const Sidebar = () => {
 
     const warna_object = warna.props.children;
 
+    const closeSidebar = () => {
+        document.querySelector(".main__content").style.transform =
+            "scale(1) translateX(0)";
+        setTimeout(() => {
+            document.body.classList.remove("sidebar-open");
+            document.querySelector(".main__content").style.transform = "";
+        }, 500);
+    };
+
     return (
         <SidebarMain color={warna_object}>
             <div className="sidebar">
                 <div className="sidebar__logo">
                     <img src={logo} alt="logo" />
-                    <div className="sidebar-close">
+                    <div className="sidebar-close" onClick={closeSidebar}>
                         <FiX />
                     </div>
                 </div>
@@ -64,6 +73,7 @@ const Sidebar = () => {
                             color={warna_object}
                             className={`${activeIndex === index && "active"}`}
                             key={`nav-${index}`}
+                            onClick={closeSidebar}
                         >
                             <div className="menu_icon">
                                 <item.icon />

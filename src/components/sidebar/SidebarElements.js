@@ -1,5 +1,5 @@
 import styled from "styled-components";
-
+import { devices } from "../../assets/scss/_media";
 import themeList from "../../config/themeList";
 
 export const MenuItem = styled.div`
@@ -116,7 +116,6 @@ export const SidebarMain = styled.div`
         align-items: stretch;
         justify-content: flex-start;
         flex-direction: column;
-
         color: ${({ theme: { theme } }) =>
             theme === themeList.light ? "#4e4d4f" : "#fff"};
         width: 300px;
@@ -135,12 +134,26 @@ export const SidebarMain = styled.div`
                 ? "rgb(2 12 27 / 70%) 0px 10px 30px -26px"
                 : "rgb(0 0 0 / 70%) 0px 10px 30px -20px"};
 
+        ${devices.smartphone} {
+            width: 100vw;
+            background-color: ${({ theme: { theme } }) =>
+                theme === themeList.light ? "#fff" : "#1f2937"};
+            color: ${({ theme: { theme } }) =>
+                theme === themeList.light ? "#4e4d4f" : "#fff"};
+            z-index: 1;
+            padding: 35px 35px 35px 8px;
+        }
         &__logo {
             display: flex;
             align-items: center;
             justify-content: flex-start;
             padding-left: 15%;
             height: 120px;
+
+            ${devices.smartphone} {
+                justify-content: space-between;
+                padding-left: 8%;
+            }
 
             img {
                 --size: 40px;
@@ -152,8 +165,12 @@ export const SidebarMain = styled.div`
                 cursor: pointer;
                 display: none;
 
+                ${devices.smartphone} {
+                    display: initial;
+                }
+
                 svg {
-                    font-size: 2rem;
+                    font-size: 1.4rem;
                 }
             }
         }
@@ -166,6 +183,10 @@ export const SidebarMain = styled.div`
             flex-grow: 1;
             gap: 30px;
             padding-bottom: 40px;
+
+            ${devices.smartphone} {
+                width: 180px;
+            }
         }
     }
 `;

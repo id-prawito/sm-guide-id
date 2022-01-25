@@ -1,5 +1,6 @@
 import styled from "styled-components";
 import themeList from "../../config/themeList";
+import { devices } from "../../assets/scss/_media";
 
 export const NavbarMain = styled.div`
     width: 100%;
@@ -15,6 +16,10 @@ export const NavbarMain = styled.div`
             align-items: center;
             justify-content: space-between;
             width: 100%;
+
+            ${devices.smartphone} {
+               gap: 20px;
+            }
         }
 
         .form_search {
@@ -62,6 +67,14 @@ export const NavbarMain = styled.div`
         .form_date {
             display: flex;
             gap: 20px;
+
+            .text {
+                display: initial;
+
+                ${devices.smartphone} {
+                    display: none;
+                }
+            }
 
             color: ${({ theme: { theme } }) =>
                 theme === themeList.light ? "#000" : "#fff"};

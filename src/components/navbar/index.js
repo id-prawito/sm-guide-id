@@ -3,6 +3,10 @@ import { NavbarMain } from "./NavbarElements";
 import { FiBell } from "react-icons/fi";
 
 const Navbar = () => {
+    const openSidebar = () => {
+        document.body.classList.add("sidebar-open");
+    };
+
     return (
         <NavbarMain>
             <div className="navbar_container">
@@ -17,7 +21,9 @@ const Navbar = () => {
                     </div>
                     <div className="form_date">
                         <div className="text">2021</div>
-                        <FiBell />
+                        <div className="open-sidebar" onClick={openSidebar}>
+                            <FiBell />
+                        </div>
                     </div>
                 </div>
             </div>
