@@ -1,5 +1,6 @@
 import { FaAngleDown, FaMinus, FaPlus } from "react-icons/fa";
 import styled from "styled-components";
+import { devices } from "../../assets/scss/_media";
 import "./app.css";
 import themeList from "../../config/themeList";
 
@@ -19,16 +20,26 @@ const Header = styled.button`
     font-size: 1rem;
     text-align: left;
     background: ${(props) => (props.color ? props.color : "#e2513a")};
-
     color: inherit;
     cursor: pointer;
     border-radius: ${(props) => (props.isActive ? "8px 8px 0px 0px" : "8px")};
-
     box-shadow: ${({ theme: { theme } }) =>
         theme === themeList.light
             ? "rgb(2 12 27 / 70%) 0px 10px 30px -24px"
             : "rgb(0 0 0 / 70%) 0px 10px 30px -20px"};
     transition: all 0.2s;
+
+    ${devices.smartphone} {
+        height: 80px;
+    }
+
+    ${devices.ipads} {
+        height: 80px;
+    }
+
+    ${devices.tablet} {
+        height: 80px;
+    }
 
     .icon_nya {
         padding: 15px;

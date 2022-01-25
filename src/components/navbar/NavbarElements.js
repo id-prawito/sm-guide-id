@@ -18,7 +18,15 @@ export const NavbarMain = styled.div`
             width: 100%;
 
             ${devices.smartphone} {
-               gap: 20px;
+                gap: 20px;
+            }
+
+            ${devices.ipads} {
+                gap: 20px;
+            }
+
+            ${devices.tablet} {
+                gap: 20px;
             }
         }
 
@@ -30,12 +38,9 @@ export const NavbarMain = styled.div`
             border-radius: 8px;
             color: ${({ theme: { theme } }) =>
                 theme === themeList.light ? "#000" : "#fff"};
-            /* color: #000; */
             padding: 6px 15px;
             gap: 10px;
             width: 520px;
-            /* box-shadow: rgb(2 12 27 / 70%) 0px 10px 30px -20px; */
-
             box-shadow: ${({ theme: { theme } }) =>
                 theme === themeList.light
                     ? "rgb(2 12 27 / 70%) 0px 10px 30px -20px"

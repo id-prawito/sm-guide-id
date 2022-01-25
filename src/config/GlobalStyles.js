@@ -111,7 +111,43 @@ const GlobalStyles = createGlobalStyle`
               : "var(--dark-background)"};;
       z-index: 100;
       margin-right: 0;
-      // transition: all 0.5s ease-in-out;
+      
+    }
+
+    @media only screen and (min-width: 480px) and (max-width: 768px) {
+      padding: 24px;
+      position: relative;
+      background-color: ${({ theme: { theme } }) =>
+          theme === themeList.light
+              ? "var(--light-background)"
+              : "var(--dark-background)"};;
+      z-index: 100;
+      margin-right: 0;
+      
+    }
+
+    @media only screen and (min-width: 768px) and (max-width: 1024px) {
+      padding: 24px;
+      position: relative;
+      background-color: ${({ theme: { theme } }) =>
+          theme === themeList.light
+              ? "var(--light-background)"
+              : "var(--dark-background)"};;
+      z-index: 100;
+      margin-right: 0;
+      
+    }
+
+    @media only screen and (min-width: 1024px) and (max-width: 1224px) {
+      padding: 24px;
+      position: relative;
+      background-color: ${({ theme: { theme } }) =>
+          theme === themeList.light
+              ? "var(--light-background)"
+              : "var(--dark-background)"};;
+      z-index: 100;
+      margin-right: 0;
+      
     }
   }
 }

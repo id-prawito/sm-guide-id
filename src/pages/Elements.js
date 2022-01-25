@@ -17,6 +17,21 @@ export const SocialMain = styled.div`
         flex-direction: column;
     }
 
+    ${devices.ipads} {
+        display: flex;
+        flex-direction: column;
+    }
+
+    ${devices.tablet} {
+        display: flex;
+        flex-direction: column;
+    }
+
+    ${devices.laptop} {
+        display: flex;
+        flex-direction: column;
+    }
+
     .text {
         font-size: 18px;
         font-weight: 500;
@@ -50,6 +65,27 @@ export const SocialMain = styled.div`
             width: 100%;
         }
 
+        ${devices.ipads} {
+            border-bottom: 1px solid var(--color);
+            border-right: none;
+            padding: 20px;
+            width: 100%;
+        }
+
+        ${devices.tablet} {
+            border-bottom: 1px solid var(--color);
+            border-right: none;
+            padding: 20px;
+            width: 100%;
+        }
+
+        ${devices.laptop} {
+            border-bottom: 1px solid var(--color);
+            border-right: none;
+            padding: 20px;
+            width: 100%;
+        }
+
         .content_date {
             display: grid;
             grid-template-columns: 32% 62%;
@@ -61,10 +97,28 @@ export const SocialMain = styled.div`
                 flex-direction: column;
             }
 
+            ${devices.ipads} {
+                display: flex;
+                flex-direction: column;
+            }
+
+            ${devices.tablet} {
+                display: flex;
+                flex-direction: column;
+            }
+
             .card_images {
                 width: 100%;
 
                 ${devices.smartphone} {
+                    width: auto;
+                }
+
+                ${devices.ipads} {
+                    width: auto;
+                }
+
+                ${devices.tablet} {
                     width: auto;
                 }
             }
@@ -122,6 +176,14 @@ export const SocialMain = styled.div`
                 height: 60vh;
             }
 
+            ${devices.ipads} {
+                height: 60vh;
+            }
+
+            ${devices.tablet} {
+                height: 60vh;
+            }
+
             .audience_heading {
                 display: flex;
                 justify-content: space-between;
@@ -136,9 +198,24 @@ export const SocialMain = styled.div`
                 justify-content: space-between;
 
                 ${devices.smartphone} {
-                    grid-template-rows: auto;
-                    grid-template-columns: none;
+                    flex-direction: column;
+                    display: flex;
                     gap: 20px;
+                    height: 100%;
+                }
+
+                ${devices.ipads} {
+                    flex-direction: column;
+                    display: flex;
+                    gap: 20px;
+                    height: 100%;
+                }
+
+                ${devices.tablet} {
+                    flex-direction: column;
+                    display: flex;
+                    gap: 20px;
+                    height: 100%;
                 }
 
                 .card_tengah {
@@ -387,6 +464,24 @@ export const SocialMain = styled.div`
             padding: 20px 20px 50px 20px;
             width: 100%;
             height: 125vh;
+        }
+
+        ${devices.ipads} {
+            padding: 20px 20px 50px 20px;
+            width: 100%;
+            height: 125vh;
+        }
+
+        ${devices.tablet} {
+            padding: 20px 20px 50px 20px;
+            width: 100%;
+            height: 125vh;
+        }
+
+        ${devices.laptop} {
+            padding: 20px 20px 50px 20px;
+            width: 100%;
+            /* height: 125vh; */
         }
 
         .advice {

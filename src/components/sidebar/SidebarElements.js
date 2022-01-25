@@ -143,6 +143,34 @@ export const SidebarMain = styled.div`
             z-index: 1;
             padding: 15px 35px 35px 8px;
         }
+
+        ${devices.ipads} {
+            width: 100vw;
+            background-color: ${({ theme: { theme } }) =>
+                theme === themeList.light ? "#fff" : "#1f2937"};
+            color: ${({ theme: { theme } }) =>
+                theme === themeList.light ? "#4e4d4f" : "#fff"};
+            z-index: 1;
+            padding: 15px 35px 35px 8px;
+        }
+
+        ${devices.tablet} {
+            width: 100vw;
+            background-color: ${({ theme: { theme } }) =>
+                theme === themeList.light ? "#fff" : "#1f2937"};
+            color: ${({ theme: { theme } }) =>
+                theme === themeList.light ? "#4e4d4f" : "#fff"};
+            z-index: 1;
+            padding: 15px 35px 35px 8px;
+        }
+
+        ${devices.laptop} {
+            overflow-x: auto;
+            &::-webkit-scrollbar {
+                display: none;
+            }
+        }
+
         &__logo {
             display: flex;
             align-items: center;
@@ -153,6 +181,16 @@ export const SidebarMain = styled.div`
             ${devices.smartphone} {
                 justify-content: space-between;
                 padding-left: 8%;
+            }
+
+            ${devices.ipads} {
+                justify-content: space-between;
+                padding-left: 8%;
+            }
+
+            ${devices.tablet} {
+                justify-content: space-between;
+                padding-left: 10%;
             }
 
             img {
@@ -168,7 +206,32 @@ export const SidebarMain = styled.div`
                 ${devices.smartphone} {
                     display: initial;
                     background: transparent;
-                    /* border: 1px solid #fff; */
+                    border: ${({ theme: { theme } }) =>
+                        theme === themeList.light
+                            ? "1px solid #222"
+                            : "1px solid #fff"};
+                    border-radius: 4px;
+                    display: flex;
+                    align-items: center;
+                    margin-bottom: 20px;
+                }
+
+                ${devices.ipads} {
+                    display: initial;
+                    background: transparent;
+                    border: ${({ theme: { theme } }) =>
+                        theme === themeList.light
+                            ? "1px solid #222"
+                            : "1px solid #fff"};
+                    border-radius: 4px;
+                    display: flex;
+                    align-items: center;
+                    margin-bottom: 20px;
+                }
+
+                ${devices.tablet} {
+                    display: initial;
+                    background: transparent;
                     border: ${({ theme: { theme } }) =>
                         theme === themeList.light
                             ? "1px solid #222"
@@ -196,6 +259,15 @@ export const SidebarMain = styled.div`
 
             ${devices.smartphone} {
                 width: 180px;
+            }
+
+            ${devices.ipads} {
+                width: 200px;
+            }
+
+            ${devices.tablet} {
+                width: 300px;
+                padding-left: 30px;
             }
         }
     }
