@@ -238,9 +238,9 @@ export const MainPageHome = ({
     const saved = localStorage.getItem("theme");
 
     return (
-        <SocialMain>
+        <SocialMain color={color}>
             <div
-                style={{ borderRight: `1px solid ${color}` }}
+                // style={{ borderRight: `1px solid ${color}` }}
                 className="social_content"
             >
                 <div className="content_date">

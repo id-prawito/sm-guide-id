@@ -141,7 +141,7 @@ export const SidebarMain = styled.div`
             color: ${({ theme: { theme } }) =>
                 theme === themeList.light ? "#4e4d4f" : "#fff"};
             z-index: 1;
-            padding: 35px 35px 35px 8px;
+            padding: 15px 35px 35px 8px;
         }
         &__logo {
             display: flex;
