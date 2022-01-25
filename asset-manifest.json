@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/sm-guide-id/static/css/main.96127486.css",
-    "main.js": "/sm-guide-id/static/js/main.bfedf0d0.js",
+    "main.css": "/sm-guide-id/static/css/main.840d2db5.css",
+    "main.js": "/sm-guide-id/static/js/main.59cd79bb.js",
     "static/media/snapchat_text.svg": "/sm-guide-id/static/media/snapchat_text.6c00dd5616480d000b35714d41b8c1c0.svg",
     "static/media/instagram_logo.svg": "/sm-guide-id/static/media/instagram_logo.1a0dbe60f4ca7af6aa08f9ffb53211b6.svg",
     "static/media/snapchat_text_white.svg": "/sm-guide-id/static/media/snapchat_text_white.0c82e184bd5ea31135b3b29f9d6c77ff.svg",
@@ -26,11 +26,11 @@
     "static/media/youtube_logo.svg": "/sm-guide-id/static/media/youtube_logo.d309d4b546b30bf441b2eeb8734ce650.svg",
     "static/media/twitch_logo.svg": "/sm-guide-id/static/media/twitch_logo.362050ca379e5457ab7d9ab81ee30e56.svg",
     "static/media/facebook_logo.svg": "/sm-guide-id/static/media/facebook_logo.9b2a83c9d1559084b38b710daef7d3f7.svg",
-    "main.96127486.css.map": "/sm-guide-id/static/css/main.96127486.css.map",
-    "main.bfedf0d0.js.map": "/sm-guide-id/static/js/main.bfedf0d0.js.map"
+    "main.840d2db5.css.map": "/sm-guide-id/static/css/main.840d2db5.css.map",
+    "main.59cd79bb.js.map": "/sm-guide-id/static/js/main.59cd79bb.js.map"
   },
   "entrypoints": [
-    "static/css/main.96127486.css",
-    "static/js/main.bfedf0d0.js"
+    "static/css/main.840d2db5.css",
+    "static/js/main.59cd79bb.js"
   ]
 }
