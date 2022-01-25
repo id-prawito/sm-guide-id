@@ -167,6 +167,16 @@ export const SidebarMain = styled.div`
 
                 ${devices.smartphone} {
                     display: initial;
+                    background: transparent;
+                    /* border: 1px solid #fff; */
+                    border: ${({ theme: { theme } }) =>
+                        theme === themeList.light
+                            ? "1px solid #222"
+                            : "1px solid #fff"};
+                    border-radius: 4px;
+                    display: flex;
+                    align-items: center;
+                    margin-bottom: 20px;
                 }
 
                 svg {
