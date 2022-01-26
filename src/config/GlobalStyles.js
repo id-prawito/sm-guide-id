@@ -111,6 +111,7 @@ const GlobalStyles = createGlobalStyle`
               : "var(--dark-background)"};;
       z-index: 100;
       margin-right: 0;
+      padding: 48px 20px;
       
     }
 
@@ -123,6 +124,7 @@ const GlobalStyles = createGlobalStyle`
               : "var(--dark-background)"};;
       z-index: 100;
       margin-right: 0;
+      padding: 48px 20px;
       
     }
 
@@ -135,6 +137,7 @@ const GlobalStyles = createGlobalStyle`
               : "var(--dark-background)"};;
       z-index: 100;
       margin-right: 0;
+      padding: 48px 20px;
       
     }
 
