@@ -69,6 +69,22 @@ export const NavbarMain = styled.div`
             }
         }
 
+        .open-sidebar {
+            display: none;
+
+            ${devices.smartphone} {
+                display: initial;
+            }
+
+            ${devices.ipads} {
+                display: initial;
+            }
+
+            ${devices.tablet} {
+                display: initial;
+            }
+        }
+
         .form_date {
             display: flex;
             gap: 20px;
@@ -85,7 +101,7 @@ export const NavbarMain = styled.div`
                 theme === themeList.light ? "#000" : "#fff"};
 
             svg {
-                font-size: 20px;
+                font-size: 25px;
             }
         }
     }

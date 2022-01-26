@@ -384,18 +384,26 @@ export const SocialMain = styled.div`
         gap: 15px;
         align-items: center;
         padding: 25px;
-
         background-color: ${({ theme: { theme } }) =>
             theme === themeList.light ? "#fdfdfd" : "#1f2937"};
         border-radius: 10px;
         transition: 0.5s;
-        /* cursor: pointer; */
         max-width: 240px;
         min-height: 300px;
         justify-content: space-between;
         box-shadow: rgb(2 12 27 / 70%) 0px 10px 30px -20px;
 
-        /* outline: #0f71c9 1px solid; */
+        ${devices.smartphone} {
+            min-width: 240px;
+        }
+
+        ${devices.ipads} {
+            min-width: 240px;
+        }
+
+        ${devices.tablet} {
+            min-width: 240px;
+        }
 
         .heading_card {
             font-size: 14px;
@@ -463,19 +471,25 @@ export const SocialMain = styled.div`
         ${devices.smartphone} {
             padding: 20px 20px 50px 20px;
             width: 100%;
-            height: 125vh;
+            /* height: 125vh; */
+            display: flex;
+            flex-direction: column;
         }
 
         ${devices.ipads} {
             padding: 20px 20px 50px 20px;
             width: 100%;
-            height: 125vh;
+            /* height: 125vh; */
+            display: flex;
+            flex-direction: column;
         }
 
         ${devices.tablet} {
             padding: 20px 20px 50px 20px;
             width: 100%;
-            height: 125vh;
+            /* height: 125vh; */
+            display: flex;
+            flex-direction: column;
         }
 
         ${devices.laptop} {

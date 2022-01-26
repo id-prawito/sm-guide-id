@@ -142,6 +142,7 @@ export const SidebarMain = styled.div`
                 theme === themeList.light ? "#4e4d4f" : "#fff"};
             z-index: 1;
             padding: 15px 35px 35px 8px;
+            border-radius: 0px;
         }
 
         ${devices.ipads} {
@@ -152,6 +153,7 @@ export const SidebarMain = styled.div`
                 theme === themeList.light ? "#4e4d4f" : "#fff"};
             z-index: 1;
             padding: 15px 35px 35px 8px;
+            border-radius: 0px;
         }
 
         ${devices.tablet} {
@@ -162,6 +164,7 @@ export const SidebarMain = styled.div`
                 theme === themeList.light ? "#4e4d4f" : "#fff"};
             z-index: 1;
             padding: 15px 35px 35px 8px;
+            border-radius: 0px;
         }
 
         ${devices.laptop} {

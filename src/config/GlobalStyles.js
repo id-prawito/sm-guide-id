@@ -103,7 +103,7 @@ const GlobalStyles = createGlobalStyle`
     transition: all 0.5s ease-in-out;
 
     @media only screen and (min-width: 320px) and (max-width: 480px) {
-      padding: 24px;
+      /* padding: 24px; */
       position: relative;
       background-color: ${({ theme: { theme } }) =>
           theme === themeList.light
@@ -115,7 +115,7 @@ const GlobalStyles = createGlobalStyle`
     }
 
     @media only screen and (min-width: 480px) and (max-width: 768px) {
-      padding: 24px;
+      /* padding: 24px; */
       position: relative;
       background-color: ${({ theme: { theme } }) =>
           theme === themeList.light
@@ -127,7 +127,7 @@ const GlobalStyles = createGlobalStyle`
     }
 
     @media only screen and (min-width: 768px) and (max-width: 1024px) {
-      padding: 24px;
+      /* padding: 24px; */
       position: relative;
       background-color: ${({ theme: { theme } }) =>
           theme === themeList.light
@@ -139,7 +139,7 @@ const GlobalStyles = createGlobalStyle`
     }
 
     @media only screen and (min-width: 1024px) and (max-width: 1224px) {
-      padding: 24px;
+      /* padding: 24px; */
       position: relative;
       background-color: ${({ theme: { theme } }) =>
           theme === themeList.light

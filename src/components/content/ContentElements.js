@@ -2,8 +2,11 @@ import styled from "styled-components";
 import { devices } from "../../assets/scss/_media";
 
 export const MainElements = styled.div`
-    overflow-x: hidden;
+    overflow-x: auto;
     padding-left: 384px;
+    &::-webkit-scrollbar {
+        display: none;
+    }
 
     ${devices.smartphone} {
         padding-left: 0;

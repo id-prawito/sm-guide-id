@@ -1,6 +1,6 @@
 import React from "react";
 import { NavbarMain } from "./NavbarElements";
-import { FiBell } from "react-icons/fi";
+import { HiMenuAlt3 } from "react-icons/hi";
 
 const Navbar = () => {
     const openSidebar = () => {
@@ -12,7 +12,7 @@ const Navbar = () => {
             <div className="navbar_container">
                 <div className="navbar_content">
                     <div className="form_search">
-                        <FiBell />
+                        <HiMenuAlt3 />
                         <input
                             type="text"
                             className="form"
@@ -22,7 +22,7 @@ const Navbar = () => {
                     <div className="form_date">
                         <div className="text">2021</div>
                         <div className="open-sidebar" onClick={openSidebar}>
-                            <FiBell />
+                            <HiMenuAlt3 />
                         </div>
                     </div>
                 </div>
